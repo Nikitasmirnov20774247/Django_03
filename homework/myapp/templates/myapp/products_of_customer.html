@@ -1,0 +1,22 @@
+{% extends "base/base.html" %}
+
+{% block content %}
+    <h1>Orders</h1>
+    <hr>
+    <h3>Last week</h3>
+        {% for product in day7 %}
+            {{ product }}<br>
+        {% endfor %}
+    <hr>
+    <h3>Last month</h3>
+        {% for product in day30 %}
+            {{ product }}<br>
+        {% endfor %}
+    <hr>
+    <h3>Last year</h3>
+        {% for product in day365 %}
+            {{ product }}<br>
+        {% endfor %}
+    <hr>
+    <p><a href="{% url 'customer' %}">To customer</a></p>
+{% endblock content %}
